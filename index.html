@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Streakline — habit tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">Streakline</span>
+    </div>
+    <div class="stats-row" id="statsRow">
+      <div class="stat">
+        <span class="stat-value" id="statToday">0%</span>
+        <span class="stat-label">done today</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="statActive">0</span>
+        <span class="stat-label">active habits</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="statBest">0</span>
+        <span class="stat-label">longest streak</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <aside class="sidebar">
+      <h2 class="sidebar-title">Categories</h2>
+      <ul class="category-list" id="categoryList">
+        <li class="category-item active" data-category="all">
+          <span>All</span><span class="count" id="countAll">0</span>
+        </li>
+      </ul>
+
+      <form class="add-form" id="addForm">
+        <h2 class="sidebar-title">New habit</h2>
+        <input type="text" id="habitName" placeholder="e.g. Read 20 minutes" required maxlength="40">
+        <input type="text" id="habitCategory" placeholder="Category (e.g. Health)" required maxlength="20">
+        <button type="submit" class="btn-primary">Add habit</button>
+      </form>
+    </aside>
+
+    <section class="board">
+      <div class="board-header">
+        <h1 id="boardTitle">All habits</h1>
+        <p class="board-sub" id="boardDate"></p>
+      </div>
+
+      <div class="habit-grid" id="habitGrid">
+        <!-- habit cards injected here -->
+      </div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <p class="empty-title">Nothing here yet</p>
+        <p class="empty-sub">Add your first habit on the left to start a streak.</p>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<template id="habitCardTemplate">
+  <article class="habit-card">
+    <div class="ring-wrap">
+      <svg class="ring" viewBox="0 0 80 80">
+        <circle class="ring-track" cx="40" cy="40" r="34"></circle>
+        <circle class="ring-progress" cx="40" cy="40" r="34"></circle>
+      </svg>
+      <button class="ring-check" type="button" aria-label="Mark done today"></button>
+    </div>
+    <div class="habit-info">
+      <p class="habit-category"></p>
+      <h3 class="habit-name"></h3>
+      <p class="habit-streak"></p>
+    </div>
+    <button class="habit-delete" type="button" aria-label="Delete habit">&times;</button>
+  </article>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>
