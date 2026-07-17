@@ -4,7 +4,7 @@ A minimal habit tracker built with vanilla JavaScript, HTML, and CSS — no fram
 
 **[Live demo](https://gus-242.github.io/habit-tracker/)** — *replace this link once deployed (see below)*
 
-![Streakline screenshot](screenshot.png)
+![Streakline screenshot](image.png)
 
 ## Features
 
