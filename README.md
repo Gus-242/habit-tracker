@@ -2,7 +2,7 @@
 
 A minimal habit tracker built with vanilla JavaScript, HTML, and CSS — no frameworks, no build step. Open `index.html` and it runs.
 
-**[Live demo](#)** — *replace this link once deployed (see below)*
+**[Live demo](https://gus-242.github.io/habit-tracker/)** — *replace this link once deployed (see below)*
 
 ![Streakline screenshot](screenshot.png)
 
@@ -34,7 +34,7 @@ This is a portfolio piece meant to demonstrate:
 No build tools needed:
 
 ```bash
-git clone https://github.com/<your-username>/habit-tracker.git
+git clone https://github.com/Gus-242/habit-tracker.git
 cd habit-tracker
 # open index.html directly in a browser, or serve it:
 python3 -m http.server 8000
